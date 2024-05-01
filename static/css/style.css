@@ -1,0 +1,89 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: #000000ec;
+}
+
+.loader {
+  width: 49.8px;
+  height: 49.8px;
+  color: rgb(235, 118, 8);
+  position: relative;
+  background: radial-gradient(11.2px,currentColor 94%,#0000);
+}
+
+.loader:before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 60%;
+  background: radial-gradient(10.08px at bottom right,#0000 94%,currentColor) top    left,
+          radial-gradient(10.08px at bottom left ,#0000 94%,currentColor) top    right,
+          radial-gradient(10.08px at top    right,#0000 94%,currentColor) bottom left,
+          radial-gradient(10.08px at top    left ,#0000 94%,currentColor) bottom right;
+  background-size: 24.4px 24.4px;
+  background-repeat: no-repeat;
+  animation: loader 1.5s infinite cubic-bezier(0.3,1,0,1);
+}
+
+@keyframes loader {
+  33% {
+    inset: -11.2px;
+    transform: rotate(0deg);
+  }
+
+  66% {
+    inset: -11.2px;
+    transform: rotate(90deg);
+  }
+
+  100% {
+    inset: 0;
+    transform: rotate(90deg);
+  }
+}
+
+.page_loader{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: white;
+    display: flex;
+    justify-content: center ;
+    align-items: center;
+    z-index: 999999;
+}
+
+.title{
+    color: rgb(235, 118, 8);
+    font-weight: bold;
+    font-style: italic;
+    font-size: 1.7rem;
+}
+
+textarea{
+    outline: none;
+    background-color: #807e7e7e;
+    color: rgba(255, 255, 255, 0.842);
+}
+
+textarea:hover{
+    outline: 1px solid rgb(235, 118, 8);
+}
+
+.btn{
+    background-color: rgb(235, 118, 8);
+    color: white;
+    border: none;
+    padding: 0.5rem 1.7rem;
+}
+
+input[type='range']{ 
+    accent-color: rgb(235, 118, 8); 
+}
