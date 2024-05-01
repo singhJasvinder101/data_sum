@@ -37,6 +37,7 @@
             <div class="w-full mt-10 md:mt-0 md:w-1/2 relative">
                 <div class="mt-2 flex flex-col w-full md:h-screen">
                     <textarea 
+                        id="result"
                         class="w-11/12 rounded-lg p-4 self-center justify-center md:h-3/4" rows="10"
                         cols="30" name="result" readonly placeholder="Your Summary">{{result}}</textarea>
                     <button
@@ -49,7 +50,7 @@
     <script>
         function myFunction() {
             /* Get the text field */
-            var copyText = document.getElementById("myInput");
+            var copyText = document.getElementById("result");
 
             /* Select the text field */
             copyText.select();
